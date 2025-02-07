@@ -45,22 +45,6 @@ class HtmlHandler {
     fs.writeFileSync(filePath, cleanHtml);
     return this;
   }
-
-  //  Métodos para modificar atributos, clases y texto usando replace (ejemplos)
-  addAttribute(selector, attributeName, attributeValue) {
-    //  ¡ADVERTENCIA!  Este método es muy básico y frágil.
-    //  No maneja selectores complejos ni HTML anidado correctamente.
-    const regex = new RegExp(`<${selector}(.*?)>`, "i"); // Busca la etiqueta
-    this.html = this.html.replace(regex, `<${selector} $1 ${attributeName}="${attributeValue}" >`);
-    return this;
-  }
-
-  setText(selector, newText) {
-    //  ¡ADVERTENCIA!  Este método es muy básico y frágil.
-    const regex = new RegExp(`(<${selector}.*?>)(.*?)(<\/${selector}>)`, "i"); // Captura el texto dentro de la etiqueta
-    this.html = this.html.replace(regex, `$1${newText}$3`);
-    return this;
-  }
 }
 
 module.exports = HtmlHandler;
