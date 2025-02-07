@@ -1,0 +1,13 @@
+{
+  "name": "fast-web-compiler",
+  "version": "1.0.0",
+  "description": "Si creas un estilo a nivel de X carpeta de component, se aplicara a todos los hijos.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
